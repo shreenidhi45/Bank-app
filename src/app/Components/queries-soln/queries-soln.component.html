@@ -1,0 +1,29 @@
+<!-- <p>{{newData| json}}</p> -->
+<nav class="navbar navbar-dark bg-danger navbar-expand-sm">
+    <div class="container px-3">
+      <a routerLink="/contacts/userhome/{{ContactId}}" class="navbar-brand">
+        <i class="fa fa-bank"></i>
+        <span> S &nbsp; B &nbsp; I &nbsp;BANK</span>
+      </a>
+      <a routerLink="/contacts/userhome/{{NewContactId}}" class="mx-4">
+        <h3>Back</h3>
+      </a>
+    </div>
+  </nav>
+  
+  <div class="row my-4 mx-2">
+    <div class="col-sm-5" *ngFor="let newDatas of newData">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title" style="color: rgb(21, 0, 255);">User Queries</h3>
+          <div>
+            <h5>{{ newDatas.content }}</h5>
+          </div>
+          <h3 class="card-title" style="color: rgb(21, 0, 255); ">Admin Solution</h3>
+          <div>
+            <h5>{{ newDatas.adminResponse }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

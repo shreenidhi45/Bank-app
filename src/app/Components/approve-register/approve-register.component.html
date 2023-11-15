@@ -1,0 +1,37 @@
+ 
+ <!-- #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)"  -->
+ <div  style="background-color: antiquewhite;">
+    <div class="container mt-4" >
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6">
+            <div class="border p-3" style="background-color: blanchedalmond;">
+              <h2 class="text-center">Register Here</h2>
+              <form #myForm="ngForm" (submit)="onRegter()" class="mx-auto" style="max-width: 400px;">
+                <div class="form-group">
+                    <label for="company">First Name:</label>
+                  <input type="text" class="form-control" id="name" name="firstname" [(ngModel)]="userreg.firstName">
+                  <label for="company">Last Name:</label>
+                  <input type="text" class="form-control" id="company" name="lastname" [(ngModel)]="userreg.lastName">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" [(ngModel)]="userreg.email">
+                  <label for="email">UserName:</label>
+                  <input type="email" class="form-control" id="email" name="username" [(ngModel)]="userreg.userName">
+                  <label for="email">Password:</label>
+                  <input type="email" class="form-control" id="email" name="password" [(ngModel)]="userreg.password">
+                  <label for="mobile">Mobile:</label> 
+                  <input type="tel" class="form-control" id="mobile" name="mobile" [(ngModel)]="userreg.phoneNumber">
+                  <label for="photo">Address:</label>
+                  <input type="string" class="form-control" id="Address" name="address" [(ngModel)]="userreg.address">
+                </div>
+                <br>
+                <input type="submit" class="btn btn-primary" value="Approve Account">
+                <span style="margin-right: 10px;"></span>
+                 <!-- <button class="btn btn-primary" (click)="resetForm()">Reset-Data</button>  -->
+                 <span style="margin-right: 10px;"></span>
+                <a routerLink="/contacts/adminhome" class="btn btn-dark">Close</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 

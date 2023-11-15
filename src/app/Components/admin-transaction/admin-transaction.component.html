@@ -1,0 +1,71 @@
+
+<nav class="navbar navbar-dark bg-success mt-1 ">
+    <div class="container-fluid " class="container-fluid d-flex justify-content-center">
+        <i class="fa fa-bank mx-4  "></i>
+        <a class="navbar-brand" routerLink="/contacts/adminhome">
+            <i class="fa fa-user"></i>
+            Admin &nbsp;Home</a>
+      </div>
+  </nav> <br>
+
+  <div class="row">
+      <div class="col mx-4 mt-3 justify-content-between align-items-center">
+        <p class="h3 text-danger fw-bold">
+          Transaction Details
+      </p>
+        <h3 >
+        </h3>
+        <form (submit)="onSearch()">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search User"
+                    [(ngModel)]="searchText"
+                    name="searchText"
+                  />
+                </div>
+                <div class="col">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-dark"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+    <div class="container mt-4">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Transaction Id</th>
+              <th>Transtype Type</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Sender Account</th>
+              <th>Reciever Account</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cust of newcustomers">
+              <td>{{ cust.transactionId }}</td>
+              <td>{{ cust.transactionType}}</td>
+              <td>{{ cust.date}}</td>
+              <td>{{ cust.amount }}</td>
+              <td>{{ cust.accNo }}</td>
+              <td>{{ cust.TargetAccNo}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+  

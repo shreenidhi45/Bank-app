@@ -1,0 +1,66 @@
+
+<nav class="navbar navbar-dark bg-danger navbar-expand-sm">
+    <div class="container px-3 ">
+      <a routerLink="/contacts/userhome/{{ContactId}}" class="navbar-brand">
+        <i class="fa fa-bank"><span> S &nbsp; B &nbsp;I &nbsp;BANK</span> </i>  </a>
+    </div>
+  </nav>
+  <div class="row">
+      <div class="col mx-4 mt-3 justify-content-between align-items-center">
+        <p class="h3 text-danger fw-bold">
+          Transaction Details
+      </p>
+        <h3 >
+        </h3>
+        <form (submit)="onSearch()">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search User"
+                    [(ngModel)]="searchText"
+                    name="searchText"
+                  />
+                </div>
+                <div class="col">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-dark"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+  <div class="container mt-4">
+      
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Account Number</th>
+            <th>First Name</th>
+            <th>Last Name </th>
+            <th>Balance</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td>{{ customerdata.customerId }}</td>
+            <td>{{ customerdata.firstName }}</td>
+            <td>{{ customerdata.lastName }}</td>
+            <td>{{ customerdata.balance }}</td>
+            <td>{{customerdata.email }}</td> 
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    

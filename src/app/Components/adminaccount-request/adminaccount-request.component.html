@@ -1,0 +1,45 @@
+<nav class="navbar navbar-dark bg-success mt-1 ">
+    <div class="container-fluid " class="container-fluid d-flex justify-content-center">
+        <i class="fa fa-bank mx-4  "></i>
+        <a class="navbar-brand" routerLink="/contacts/adminhome">
+            <i class="fa fa-user"></i>
+            Admin &nbsp;Home</a>
+      </div>
+  </nav>
+  <h1 class="text-center">View Account Request</h1>
+  <div class="container mt-5 text-center">
+    <div class="row">
+      <div class="col" *ngFor="let contact of Regdata">
+        <div class="card shadow" style="width: 15rem">
+          <div class="card-body">
+            <div class="d-flex justify-content-center">
+              
+            </div>
+           
+            <p class="card-text">First Name: {{ contact.firstName }}</p>
+            <p class="card-text">Last Name: {{ contact.lastName }}</p>
+            <p class="card-text">Email: {{ contact.email }}</p>
+            <p class="card-text">User Name: {{ contact.userName }}</p>
+            <p class="card-text">Password: {{ contact.password }}</p>
+            <!-- <p class="card-text">Address: {{ contact.address }}</p>  Correct the property name here -->
+            <!-- <p class="card-text">Phone: {{ contact.phoneNumber }}</p> --> 
+          </div>
+          <div class="row mt-3">
+            <div class="col text-center">
+              <button routerLink="/contacts/adminapproveregister/{{contact.requestId}}" class="btn btn-sm btn-success mx-3 my-9">
+                <i class="fa fa-arrow"></i>Approve
+              </button>
+              <button (click)="clickDeleteContact(contact.requestId)" class="btn btn-sm btn-danger mx-1">
+                <i class="fa fa-trash mx-1"></i>Reject
+              </button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  
+  
+  
+  

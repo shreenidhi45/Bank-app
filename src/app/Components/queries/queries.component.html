@@ -1,0 +1,50 @@
+<nav class="navbar navbar-dark bg-danger navbar-expand-sm">
+    <div class="container px-3">
+      <a routerLink="/contacts/userhome/{{ContactId}}" class="navbar-brand">
+        <i class="fa fa-bank"></i>
+        <span> S &nbsp; B &nbsp; I &nbsp;BANK</span>
+      </a>
+    </div>
+  <a routerLink="/contacts/querysolution/{{ NewContactId}}" class="mx-4" style="border: 1;"> <h3>View</h3></a>
+  </nav>
+  <form #myForm="ngForm" (submit)="onQuery()">
+    <!-- Message input -->
+    <div class="form-outline mb-4 mt-4">
+      <label class="form-label container-fluid d-flex justify-content-center mt-3 mb-3" for="form4Example3">
+        <h2>Enter Your Query</h2>
+      </label>
+      <textarea class="form-control" id="form4Example3" rows="4" name="qury" [(ngModel)]="query"></textarea>
+    </div>
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block justify-content-center">
+      Send
+    </button>
+  </form>
+  
+  
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Data to display in the modal: </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <pre>{{data}}</pre> -->
+  <!-- <pre>{{ newData|json}}</pre> -->
+  
+  <!-- <div *ngFor="let x of newData">{{x.content}}</div> -->

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-dark bg-success mt-1 ">
+ 
+  <div class="container-fluid " class="container-fluid d-flex justify-content-center">
+    <i class="fa fa-bank mx-4  "></i>
+      <a class="navbar-brand" routerLink="/contacts/userhome/{{ContactId}}">
+       <i class="fa fa-user"></i>
+          User &nbsp;Home</a>
+    </div>
+</nav>
+
+
+<nav class="navbar navbar-dark bg-success mt-4">
+  <div class="container-fluid d-flex ">
+      <a class="navbar-brand" routerLink="/contacts/viewuser/{{customerdata.customerId}}">Accounts</a>
+      <a class="navbar-brand" routerLink="/contacts/transaction/{{customerdata.customerId}}">Transaction</a>
+      <a class="navbar-brand" routerLink="/contacts/passbook/{{customerdata.customerId}}">Passbook</a>
+      <a class="navbar-brand" routerLink="/contacts/fd/{{customerdata.customerId}}">Fixed Deposit</a>
+      <a class="navbar-brand" routerLink="/contacts/queries/{{customerdata.customerId}}">Queries</a>
+      <a class="navbar-brand" routerLink="/">Logout</a>
+  </div>
+</nav>
+<!-- <pre>{{customerdata|json}}</pre> -->
+<!-- <div class="user-home-container " style="background-color: azure;">
+  <img src="" class="background-image">
+  <div class="user-content">
+    <h1>Welcome To User Home  {{customerdata.firstname}} &nbsp;&nbsp;{{customerdata.lastname}}</h1>
+    <! Add other content here -->
+  <!-- </div>
+</div> --> 
+<div class="bg-primary d-flex justify-content-center align-items-center rounded-circle mx-2 mp- mt-4" style="width: 80vw; height: 60vh;">
+  <div class="container text-center">
+    <div class="card border-0 bg-primary text-white">
+      <div class="card-body">
+        <h2 class="animated-text">Welcome &nbsp; {{customerdata.firstName}} &nbsp;&nbsp;{{customerdata.lastName}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<pre>{{ContactId|json}}</pre>

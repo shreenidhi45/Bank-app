@@ -1,0 +1,27 @@
+<nav class="navbar navbar-dark bg-success mt-1 ">
+    <div class="container-fluid " class="container-fluid d-flex justify-content-center">
+        <i class="fa fa-bank mx-4"></i>
+        <a class="navbar-brand" routerLink="/contacts/adminhome">
+            <i class="fa fa-user"></i>
+            Admin &nbsp;Home</a>
+      </div>
+  </nav>
+<!-- <p>queriesadmin works!</p> -->
+<!-- <pre>{{newDataQuery|json}}</pre> -->
+<div class="row my-4 mx-2">
+    <div class="col-sm-5" *ngFor="let newDatas of newDataQuery">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title" style="color: rgb(21, 0, 255);">User Queries</h3>
+          <div>
+            <h5>{{ newDatas.content }}</h5>
+          </div>
+          <h3 class="card-title" style="color: rgb(21, 0, 255); ">Admin Solution</h3>
+          <div>
+            <h5>{{ newDatas.adminResponse }}</h5>
+          </div>
+          <div><a routerLink="/contacts/updatedquery/{{newDatas.queryId}}">Solve Query</a></div>
+        </div>
+      </div>
+    </div>
+  </div>

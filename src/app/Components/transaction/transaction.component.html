@@ -1,0 +1,69 @@
+<nav class="navbar navbar-dark bg-danger navbar-expand-sm">
+    <div class="container px-3 ">
+      <a routerLink="/contacts/userhome/{{newContactId}}" class="navbar-brand">
+        <i class="fa fa-bank"><span> Aurionpro &nbsp; Bank &nbsp;India </span> </i>  </a>
+    </div>
+  </nav>
+  
+  <div class="container mt-3">
+  <div class="container mt-5">
+      <div class="row d-flex flex-column flex-md-row align-items-stretch">
+        <!-- Deposit Card (Circular) -->
+        <div class="col-md-4 col-sm-12">
+          <div class="card bg-success rounded-circle text-center p-5">
+            <h3 class="card-title text-light mt-4">Deposit</h3>
+            <!-- Deposit Form --><br>
+            <form #myForm="ngForm" (submit)="onDeposit()" >
+              <div class="form-group">
+                <label for="depositAmount" class="text-light mt-6 mb-2">Amount:</label>
+                <input type="number" class="form-control" id="depositAmount" [(ngModel)]="depositAmounts" name="depositAmounts" required>
+                <!-- <input type="hidden" class="form-control" id="depositAmount" [(ngModel)]="depositAmounts.userId" name="userId" [value]="ContactId" required> -->
+              </div><br>
+              <button type="submit" class="btn btn-light mt-auto mt-6">Deposit</button><br><br><br>
+            </form>
+          </div>
+        </div>
+  
+  
+        <div class="col-md-4 col-sm-12">
+          <div class="card bg-primary rounded-circle text-center p-5">
+            <h3 class="card-title text-light mb-4">Withdrawl</h3>
+            <!-- Deposit Form --><br>
+            <form #myForm="ngForm" (submit)="onWithdraw()" >
+              <div class="form-group">
+                <label for="depositAmount" class="text-light mt-4 mb-2">Amount:</label>
+                <input type="number" class="form-control" id="depositAmount" [(ngModel)]="withdrawAmounts" name="withdrawAmounts" required>
+              </div><br>
+              <button type="submit" class="btn btn-light mt-auto">Withdraw</button><br><br><br>
+            </form>
+          </div>
+        </div>
+  
+        <div class="col-md-4 col-sm-12">
+          <div class="card bg-danger rounded-circle text-center p-5">
+            <h3 class="card-title text-light" class="text-light">Transfer</h3>
+        <form #myForm="ngForm" (submit)="onTransfer()" >
+          <div class="form-group">
+            <label for="transferAmount" class="text-light mb-2">Amount:</label>
+            <input type="number" class="form-control" id="transferAmount" [(ngModel)]="transferAmounts" name="transferAmounts" required>
+          </div>
+          <div class="form-group" >
+            <label for="recipientAccount" class="text-light mt-2 mb-3" >Recipient Account:</label>
+            <input type="number" class="form-control" id="recipientAccount" name="receiver_accc" [(ngModel)]="receiver_accc" required>
+          </div><br>
+          <button type="submit" class="btn btn-light mt-auto">Transfer</button>
+        </form>
+      </div>
+  </div>
+  
+  <!-- <pre>{{depositAmounts|json}}</pre>
+  <pre>{{depositAmountss|json}}</pre>
+  <pre>{{withdrawAmounts|json}}</pre>
+  <pre>{{withdrawAmountss|json}}</pre>
+  <pre>{{transferAmounts|json}}</pre>
+  <pre>{{transferAmountss|json}}</pre> -->
+  <pre>{{newContactId|json}}</pre> 
+  <pre>{{id|json}}</pre> 
+  
+  
+     

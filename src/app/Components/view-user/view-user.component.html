@@ -1,0 +1,46 @@
+<nav class="navbar navbar-dark bg-danger navbar-expand-sm">
+    <div class="container px-3 ">
+      <a routerLink="/contacts/userhome/{{ContactId}}" class="navbar-brand">
+        <i class="fa fa-bank"><span> S &nbsp; B &nbsp;I &nbsp;BANK</span> </i>  </a>
+    </div>
+  </nav>
+  <div class="container mt-3">
+   
+    
+      <!-- for loading -->
+    
+      <div class="container mt-5">
+        <div class="row">
+          <div  class="col-md-3 mb-4 mx-3">
+            <div class="card shadow" style="width: 20rem">
+              <div class="col-md-6">
+                <!-- Add the image source here -->
+                <!-- <img [src]="" class="card-img-top" alt="Customer Image" /> -->
+              </div>
+              <div class="card-body col-12">
+                <p class="card-text">Name:{{customerdata.firstname}} {{customerdata.lastname}} </p>
+                <p class="card-text">Email:{{customerdata.email}}</p>
+                <p class="card-text">Balance:{{customerdata.balance}}</p>
+                <div class="container mb-2">
+                  <div class="d-flex justify-content-between">
+                    <!-- Use the customer's ID for router links -->
+                    <a [routerLink]="'/contacts/view/'" class="btn btn-primary btn-sm md-4">
+                      View <i class="fa fa-eye"></i>
+                    </a>
+                    <span class="mx-2"></span>
+                    <a [routerLink]="'/contacts/edit/'" class="btn btn-primary btn-sm md-4">
+                      Update <i class="fa fa-eye"></i>
+                    </a>
+                    <span class="mx-2"></span>
+                    <button class="btn btn-danger btn-sm md-4" (click)="DeleteContact()">
+                      Delete <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!--     
+  <pre>{{customers|json}}</pre> -->
